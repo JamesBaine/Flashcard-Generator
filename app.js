@@ -68,7 +68,7 @@ var selections = function(){
 			break;
 
 		case "Select card":
-			selectFlashCard;
+			selectFlashCard();
 			break;
 		}
 	});
@@ -103,7 +103,7 @@ var selectFlashCard = function(){
 					}
 				]).then(function(pick){
 					if(pick.back){
-						flashcards[0].printBack();
+						flashCards[0].printBack();
 						selectFlashCard();
 					} else {
 						selectFlashCard();
@@ -125,7 +125,7 @@ var selectFlashCard = function(){
 					}
 				]).then(function(pick){
 					if(pick.back){
-						flashcards[1].printBack();
+						flashCards[1].printBack();
 						selectFlashCard();
 					} else {
 						selectFlashCard();
@@ -147,7 +147,7 @@ var selectFlashCard = function(){
 					}
 				]).then(function(pick){
 					if(pick.back){
-						flashcards[2].printBack();
+						flashCards[2].printBack();
 						selectFlashCard();
 					} else {
 						selectFlashCard();
@@ -169,7 +169,7 @@ var selectFlashCard = function(){
 					}
 				]).then(function(pick){
 					if(pick.back){
-						flashcards[3].printBack();
+						flashCards[3].printBack();
 						selectFlashCard();
 					} else {
 						selectFlashCard();
@@ -191,7 +191,7 @@ var selectFlashCard = function(){
 					}
 				]).then(function(pick){
 					if(pick.back){
-						flashcards[4].printBack();
+						flashCards[4].printBack();
 						selectFlashCard();
 					} else {
 						selectFlashCard();
@@ -200,7 +200,7 @@ var selectFlashCard = function(){
 			} else {
 				console.log("There is not a flashcard in this slot");
 			}
-			break;		
+			break;
 		}
 	});
 };

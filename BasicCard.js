@@ -9,7 +9,7 @@ MakeCard.prototype.printInfo = function(){
 	console.log();
 };
 
-MakeCard.prototype.printInfo = function(){
+MakeCard.prototype.printFront = function(){
 	console.log();
 	console.log("Card Front: " + this.front);
 };
