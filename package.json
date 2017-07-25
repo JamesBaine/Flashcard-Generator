@@ -1,0 +1,19 @@
+{
+  "name": "flash-card-generator",
+  "version": "1.0.0",
+  "description": "UCLA Bootcamp HW wk 11",
+  "main": "BasicCard.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesBaine/Flashcard-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesBaine/Flashcard-Generator/issues"
+  },
+  "homepage": "https://github.com/JamesBaine/Flashcard-Generator#readme"
+}
