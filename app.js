@@ -57,6 +57,7 @@ var selections = function(){
 		}
 	]).then(function(selection){
 		switch(selection.pick){
+
 		case "Make card":
 			createFlashCard();
 			break;
@@ -69,6 +70,137 @@ var selections = function(){
 		case "Select card":
 			selectFlashCard;
 			break;
+		}
+	});
+};
+
+var selectFlashCard = function(){
+	inquirer.prompt([
+		{
+			type: "list",
+			name: "pickFlashCard",
+			message: "Select flash card: ",
+			choices: [
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"back"
+			]
+		}
+	]).then(function(flash){
+		switch(flash.pickFlashCard){
+
+		case "1":
+			if(flashCards[0]){
+				flashCards[0].printFront();
+				inquirer.prompt([
+					{
+						type: "confirm",
+						name: "back",
+						message: "View back?"
+					}
+				]).then(function(pick){
+					if(pick.back){
+						flashcards[0].printBack();
+						selectFlashCard();
+					} else {
+						selectFlashCard();
+					}
+				});
+			} else {
+				console.log("There is not a flashcard in this slot");
+			}
+			break;
+
+		case "2":
+			if(flashCards[1]){
+				flashCards[1].printFront();
+				inquirer.prompt([
+					{
+						type: "confirm",
+						name: "back",
+						message: "View back?"
+					}
+				]).then(function(pick){
+					if(pick.back){
+						flashcards[1].printBack();
+						selectFlashCard();
+					} else {
+						selectFlashCard();
+					}
+				});
+			} else {
+				console.log("There is not a flashcard in this slot");
+			}
+			break;
+
+		case "3":
+			if(flashCards[2]){
+				flashCards[2].printFront();
+				inquirer.prompt([
+					{
+						type: "confirm",
+						name: "back",
+						message: "View back?"
+					}
+				]).then(function(pick){
+					if(pick.back){
+						flashcards[2].printBack();
+						selectFlashCard();
+					} else {
+						selectFlashCard();
+					}
+				});
+			} else {
+				console.log("There is not a flashcard in this slot");
+			}
+			break;
+
+		case "4":
+			if(flashCards[3]){
+				flashCards[3].printFront();
+				inquirer.prompt([
+					{
+						type: "confirm",
+						name: "back",
+						message: "View back?"
+					}
+				]).then(function(pick){
+					if(pick.back){
+						flashcards[3].printBack();
+						selectFlashCard();
+					} else {
+						selectFlashCard();
+					}
+				});
+			} else {
+				console.log("There is not a flashcard in this slot");
+			}
+			break;
+
+		case "5":
+			if(flashCards[4]){
+				flashCards[4].printFront();
+				inquirer.prompt([
+					{
+						type: "confirm",
+						name: "back",
+						message: "View back?"
+					}
+				]).then(function(pick){
+					if(pick.back){
+						flashcards[4].printBack();
+						selectFlashCard();
+					} else {
+						selectFlashCard();
+					}
+				});
+			} else {
+				console.log("There is not a flashcard in this slot");
+			}
+			break;		
 		}
 	});
 };
